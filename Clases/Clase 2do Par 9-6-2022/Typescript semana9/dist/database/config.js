@@ -13,13 +13,12 @@ exports.dbConnection = void 0;
 const mongoose_1 = require("mongoose");
 const dbConnection = () => __awaiter(void 0, void 0, void 0, function* () {
     try {
-        yield (0, mongoose_1.connect)(process.env["MONGO_CNN"] || '');
-        console.log(dbConnection);
+        yield (0, mongoose_1.connect)(process.env["MONGODB_CNN"] || '');
         console.log('Base de datos Conectada');
     }
     catch (err) {
         console.log(err);
-        throw new Error("Error al conectre");
+        throw new Error("ERROR AL CONECTARSE A LA BD");
     }
 });
 exports.dbConnection = dbConnection;

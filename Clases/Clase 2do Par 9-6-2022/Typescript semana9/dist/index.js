@@ -1,5 +1,10 @@
 "use strict";
-console.log("ok");
+Object.defineProperty(exports, "__esModule", { value: true });
+const dotenv_1 = require("dotenv");
+(0, dotenv_1.config)();
+const server_1 = require("./server");
+const server = new server_1.Server();
+server.listen();
 // // const express=require('express');
 // import express from 'express';
 // const app =express();

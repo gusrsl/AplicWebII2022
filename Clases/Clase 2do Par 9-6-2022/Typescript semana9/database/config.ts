@@ -3,12 +3,11 @@ import { connect } from 'mongoose'
 const dbConnection = async ()=> {
     try {
 
-       await connect(process.env["MONGO_CNN"] || '');
-       console.log(dbConnection);
+       await connect(process.env["MONGODB_CNN"] || '');
        console.log('Base de datos Conectada');
     } catch (err) {
         console.log(err);
-        throw new Error("Error al conectre")
+        // throw new Error('ERROR AL CONECTARSE A LA BD');
     }
 
     }
