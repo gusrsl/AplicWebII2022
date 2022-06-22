@@ -18,7 +18,7 @@ const dbConnection = () => __awaiter(void 0, void 0, void 0, function* () {
     }
     catch (err) {
         console.log(err);
-        throw new Error("ERROR AL CONECTARSE A LA BD");
+        // throw new Error('ERROR AL CONECTARSE A LA BD');
     }
 });
 exports.dbConnection = dbConnection;
