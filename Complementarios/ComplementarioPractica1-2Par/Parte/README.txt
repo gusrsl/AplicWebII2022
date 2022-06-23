@@ -1,0 +1,1 @@
+Expongo los diferentes doumentos en los cuales participe en la transcipcion en typescript
