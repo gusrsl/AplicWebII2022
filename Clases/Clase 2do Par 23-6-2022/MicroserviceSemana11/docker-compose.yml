@@ -1,0 +1,22 @@
+version: '3'
+
+services:
+  monolitico:
+    build: ./monolitico
+  usuarios:
+    build: ./microservicio/usuario
+  productos:
+    build: ./microservicio/productos
+  clientes:
+    build: ./microservicio/cliente
+  nginx:
+    image: nginx
+    ports:
+      - "8080:8080"
+    volumes:
+      - ./nginx.conf:/etc/nginx/conf.d/default.conf
+    depends_on:
+      - monolitico
+      - usuarios
+      - productos
+      - clientes
