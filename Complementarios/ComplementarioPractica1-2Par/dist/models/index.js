@@ -1,5 +1,5 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.Usuario = void 0;
-const Usuarios_1 = require("./Usuarios");
-Object.defineProperty(exports, "Usuario", { enumerable: true, get: function () { return Usuarios_1.Usuario; } });
+exports.Bus = void 0;
+const Buses_1 = require("./Buses");
+Object.defineProperty(exports, "Bus", { enumerable: true, get: function () { return Buses_1.Bus; } });

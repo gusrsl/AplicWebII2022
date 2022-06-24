@@ -39,20 +39,25 @@ exports.server = void 0;
 const express_1 = __importStar(require("express"));
 const config_1 = require("./database/config");
 const cors_1 = __importDefault(require("cors"));
-const Usuarios_1 = require("./routes/Usuarios");
+const Buses_1 = require("./routes/Buses");
 class server {
     constructor() {
         this.app = (0, express_1.Router)();
         this.router = (0, express_1.Router)();
         this.port = Number(process.env["PORT"]);
         this.paths = {
-            usuarios: '/api/usuarios',
+            buses: '/api/buses',
             //añadir mas si se necesitan
         };
         this.conextarDB();
         this.middlewares();
         this.routes();
         this.router.use('/v1/sextoa', this.app);
+        this.app.use((req, res, next) => {
+            res.status(400).send({
+                message: "no existe la ruta"
+            });
+        });
         this._express = (0, express_1.default)().use(this.router);
     }
     conextarDB() {
@@ -65,7 +70,7 @@ class server {
         this.app.use(express_1.default.json());
     }
     routes() {
-        this.app.use(this.paths.usuarios, Usuarios_1.router);
+        this.app.use(this.paths.buses, Buses_1.router);
     }
     listen() {
         this._express.listen(this.port, () => {

@@ -37,8 +37,8 @@ const ObtenerUsuarios = (req, res) => __awaiter(void 0, void 0, void 0, function
 exports.ObtenerUsuarios = ObtenerUsuarios;
 const ObtenerUsuario = (req, res) => __awaiter(void 0, void 0, void 0, function* () {
     const { id } = req.params;
-    const producto = yield models_1.Usuario.findById(id);
-    res.json(producto);
+    const usuario = yield models_1.Usuario.findById(id);
+    res.json(usuario);
 });
 exports.ObtenerUsuario = ObtenerUsuario;
 const CrearUsuario = (req, res) => __awaiter(void 0, void 0, void 0, function* () {

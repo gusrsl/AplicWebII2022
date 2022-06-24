@@ -29,5 +29,5 @@ const UsuarioSchema = new mongoose_1.Schema({
         default: true,
     },
 });
-const Usuario = (0, mongoose_1.model)('Producto', UsuarioSchema);
+const Usuario = (0, mongoose_1.model)('Usuario', UsuarioSchema);
 exports.Usuario = Usuario;

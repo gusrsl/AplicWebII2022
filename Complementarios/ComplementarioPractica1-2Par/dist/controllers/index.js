@@ -23,6 +23,6 @@ var __importStar = (this && this.__importStar) || function (mod) {
     return result;
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.Usuario = void 0;
-const Usuario = __importStar(require("./Usuarios"));
-exports.Usuario = Usuario;
+exports.Bus = void 0;
+const Bus = __importStar(require("./Buses"));
+exports.Bus = Bus;
