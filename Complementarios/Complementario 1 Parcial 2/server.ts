@@ -43,7 +43,7 @@ class server {
     }
     listen() {
         this._express.listen(this.port, () => {
-            console.log(`Servidor ejecutando en http://localhost:${this.port}/v1/sextoa/api/usuarios`);
+            console.log(`Servidor ejecutando en http://localhost:${this.port}/v1/sextoa/api/buses`);
         })
     }
 }
